@@ -1,0 +1,76 @@
+body {
+  background-color: rgb(143, 3, 143);
+}
+
+.hour {
+  width: 50%;
+  background-color: red;
+}
+
+.minute {
+  width: 50%;
+  background-color: yellow;
+}
+
+.second {
+  width: 50%;
+  background-color: #fff;
+}
+
+.clock {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin: 50px auto;
+  padding: 2rem;
+  background-color: rgb(128, 23, 128);
+  box-shadow: 0 2vw 4vw -1vw rgba(0, 0, 0, 0.8);
+}
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ccc;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  z-index: 10;
+  box-shadow: 0 2px 4px -1px black;
+}
+.clock-ui {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translate(-3px);
+}
+
+.time {
+  height: 6px;
+  position: absolute;
+  top: 50%;
+  transform-origin: right;
+  transform: rotate(90deg);
+  transition: all 0.05s cubic-bezier(0, 0, 0.52, 2.51) 0s;
+}
+
+.info {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+span {
+  margin: 30px;
+}
+
+.hour-info {
+  color: red;
+}
+
+.minute-info {
+  color: yellow;
+}
