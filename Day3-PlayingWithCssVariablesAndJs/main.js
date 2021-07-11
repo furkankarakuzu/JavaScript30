@@ -11,7 +11,3 @@ values.forEach(element => {
 values.forEach(element=>{
     element.addEventListener('mousemove',update);
 })
-
-values.forEach(element=>{
-    element.addEventListener('onchange',update);
-})
