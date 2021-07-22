@@ -1,0 +1,90 @@
+html {
+  box-sizing: border-box;
+  background: pink;
+}
+
+body {
+  margin: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.panels {
+  overflow: hidden;
+  display: flex;
+  min-height: 100vh;
+}
+
+.panel {
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+  align-items: center;
+  transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+  font-size: 20px;
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel1 {
+  background-image: url("https://lh3.googleusercontent.com/proxy/WDovHGdDW3etV90BLInltEJy_bqlTFBZ4q4I6Acty28NOKcVUa871rKtUXDQQlCEFXOfyyrSQZsve-vqJQQMWNudV_CCHZVajLGjM-N3LssY1onvREpzvHdTQLn5");
+}
+
+.panel2 {
+  background-image: url("http://www.evolo.us/wp-content/uploads/2019/04/0516-0.jpg");
+}
+
+.panel3 {
+  background-image: url("https://64.media.tumblr.com/66efd91bf13521db745622dc3f32db4f/tumblr_mhced3yDnQ1rga5m1o1_500.jpg");
+}
+
+.panel4 {
+  background-image: url("https://previews.123rf.com/images/thesupe87/thesupe871105/thesupe87110500039/9591782-vertical-aerial-view-of-the-manhattan-section-of-new-york-city-including-all-of-the-buildings-and-sk.jpg");
+}
+
+.panel > * {
+  margin: 0;
+  width: 100%;
+  transition: transform 0.5s;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel > *:first-child {
+  transform: translateY(-100%);
+}
+
+.panel.open-active > *:first-child,
+.panel.open-active > *:last-child {
+  transform: translateY(0);
+}
+
+.panel > *:last-child {
+  transform: translateY(100%);
+}
+
+.panel p {
+  text-transform: uppercase;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  font-size: 2em;
+}
+
+.panel p:nth-child(2) {
+  font-size: 4em;
+}
+
+.panel.open {
+  flex: 4;
+}
